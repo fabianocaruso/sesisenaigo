@@ -6,7 +6,7 @@
   <title>SESI SENAI Goiás | sesisenai.inf.br</title>
   <meta name="description" content="Página de entrada do domínio sesisenai.inf.br para acesso aos ambientes digitais SESI SENAI." />
   <meta name="theme-color" content="#15499B" />
-  <link rel="preload" href="assets/sesi-senai-logo.png" as="image" />
+  <link rel="preload" href="marca_CONJUNTAS_SESI_SENAI_2024_completa%20colorida.png" as="image" />
   <style>
     :root {
       --azul-sesi-senai: #15499B;
@@ -216,6 +216,7 @@
       margin-top: 24px;
     }
 
+    /* Transformado em link clicável com animação */
     .card {
       display: grid;
       grid-template-columns: 42px 1fr;
@@ -225,6 +226,16 @@
       border-radius: 20px;
       background: rgba(246, 249, 255, .9);
       border: 1px solid var(--linha);
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(21, 73, 155, 0.12);
+      border-color: var(--azul-sesi-senai);
     }
 
     .icon {
@@ -297,7 +308,7 @@
   <div class="page">
     <header aria-label="Cabeçalho">
       <a class="brand" href="/" aria-label="SESI SENAI Goiás">
-        <img src="assets/sesi-senai-logo.png" alt="Marca SESI SENAI" />
+        <img src="marca_CONJUNTAS_SESI_SENAI_2024_completa%20colorida.png" alt="Marca SESI SENAI" />
       </a>
       <div class="domain-pill">sesisenai.inf.br</div>
     </header>
@@ -312,8 +323,8 @@
             docentes, equipes técnicas e comunidade atendida pelas instituições.
           </p>
           <div class="actions" aria-label="Ações principais">
-            <a class="button primary" href="mailto:bibliotecavirtual@fieg.com.br">Entrar em contato</a>
-            <a class="button secondary" href="#acessos">Ver acessos</a>
+            <a class="button primary" href="#acessos">Acessar Sistemas</a>
+            <a class="button secondary" href="mailto:bibliotecavirtual@fieg.com.br">Suporte Técnico</a>
           </div>
         </div>
 
@@ -321,27 +332,30 @@
           <h2>Acessos rápidos</h2>
           <p>Use esta página como ponto inicial para organizar links, avisos e serviços do ecossistema SESI SENAI.</p>
           <div class="cards">
-            <div class="card">
+            
+            <a href="acoes-diretores/index.html" class="card">
               <div class="icon" aria-hidden="true">1</div>
+              <div>
+                <strong>Gestão Estratégica</strong>
+                <span>Painel exclusivo para Diretores SESI registrarem ações, gerarem evidências e consolidarem relatórios.</span>
+              </div>
+            </a>
+            
+            <a href="#" class="card">
+              <div class="icon" aria-hidden="true">2</div>
               <div>
                 <strong>Educação e formação</strong>
                 <span>Espaço para orientar o acesso a cursos, trilhas, materiais e ambientes de aprendizagem.</span>
               </div>
-            </div>
-            <div class="card">
-              <div class="icon" aria-hidden="true">2</div>
+            </a>
+            
+            <a href="#" class="card">
+              <div class="icon" aria-hidden="true">3</div>
               <div>
                 <strong>Biblioteca Virtual</strong>
                 <span>Entrada para serviços de curadoria, pesquisa, leitura e apoio documental.</span>
               </div>
-            </div>
-            <div class="card">
-              <div class="icon" aria-hidden="true">3</div>
-              <div>
-                <strong>Atendimento</strong>
-                <span>Canal para direcionar dúvidas, solicitações e contatos institucionais.</span>
-              </div>
-            </div>
+            </a>
           </div>
         </aside>
       </section>
